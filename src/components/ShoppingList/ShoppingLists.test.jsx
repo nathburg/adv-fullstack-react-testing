@@ -1,9 +1,4 @@
-import {
-  fireEvent,
-  render,
-  screen,
-  TestingLibraryElementError,
-} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ShoppingLists from './ShoppingLists';
 
 describe('ShoppingLists', () => {

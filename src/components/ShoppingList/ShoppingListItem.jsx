@@ -1,10 +1,10 @@
-export default function ShoppingListItem({ shoppingItem }) {
+export default function ShoppingListItem({
+  shoppingItem: { shopping_list_id, id, item_name, quantity },
+}) {
   return (
-    <div
-      data-testid={`shopping-list-item-${shoppingItem.shopping_list_id}-${shoppingItem.id}`}
-    >
-      {shoppingItem.item_name}
-      {shoppingItem.quantity}
+    <div data-testid={`shopping-list-item-${shopping_list_id}-${id}`}>
+      {item_name}
+      {quantity}
     </div>
   );
 }
