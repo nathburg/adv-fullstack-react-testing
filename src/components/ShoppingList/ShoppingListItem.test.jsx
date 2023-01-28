@@ -17,6 +17,8 @@ describe('ShoppingListItem', () => {
       shopping_list_id: 0,
     };
     render(<ShoppingListItem shoppingItem={dogItem} />);
-    expect(screen.getByTestId('shopping-list-item-0')).not.toBe(null);
+    expect(screen.getByTestId('shopping-list-item-0-0')).not.toBe(
+      null
+    );
   });
 });

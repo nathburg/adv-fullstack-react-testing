@@ -4,7 +4,7 @@ import {
   screen,
   TestingLibraryElementError,
 } from '@testing-library/react';
-import ShoppingListItem from './ShoppingListItem';
+import ShoppingListItemForm from './ShoppingListItemForm';
 
 describe('ShoppingListItem', () => {
   it('shopping list item renders at all', () => {
@@ -16,5 +16,9 @@ describe('ShoppingListItem', () => {
       quantity: 100,
       shopping_list_id: 0,
     };
+    render(<ShoppingListItemForm id={'test-id'} />);
+    expect(
+      screen.getByTestId('shopping-list-item-form-test-id')
+    ).not.toBe(null);
   });
 });
